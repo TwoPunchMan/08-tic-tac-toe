@@ -1,0 +1,102 @@
+:root {
+	--start-game-btn: lawngreen;
+	--gameboard-slot: rgb(219, 152, 53);
+	--gameboard-slot-border: black;
+	--gameboard-slot-box-shadow: #463f3f;
+	--gameboard-box-shadow: rgb(245, 245, 61);
+	--white-color: white;
+}
+
+* {
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+body {
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+/* Background */
+
+.background {
+	position: fixed;
+	z-index: -1;
+	height: 100vh;
+	width: 100vw;
+}
+
+/* Header */
+
+.header {
+	padding: 48px 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.new-game-btn {
+	width: 228px;
+	height: 64px;
+	background-color: var(--start-game-btn);
+	font-size: 22px;
+	border-radius: 4px;
+
+}
+
+/* Game Board */
+
+.main-content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.player {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.gameboard { 
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 22px;
+	margin: 0;
+	padding: 24px;
+	background-image: url(images/gameboard.jpg);
+	box-shadow: 0 0 2px 6px var(--gameboard-box-shadow);
+}
+
+.board-slot {
+	display: flex;
+	background-color: var(--gameboard-slot);
+	border: 2px solid var(--gameboard-slot-border);
+    box-shadow: 0 0 6px 2px var(--gameboard-slot-box-shadow);
+	width: 168px;
+	height: 168px;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Footer */
+
+.footer {
+	margin-top: 24px;
+}
+
+.credits {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--white-color);
+}
+
+.credits a:link {
+	color: var(--white-color);
+}
